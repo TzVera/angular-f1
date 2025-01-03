@@ -1,0 +1,68 @@
+/* CSS Inicio */
+
+main {
+    background: url('/background-home.avif');
+    background-position: center;
+    background-repeat: no-repeat;   
+    background-size: cover;
+    width: 100%;
+    height: 573px;
+}
+
+h1 {
+    position: relative;
+    width: 98.7%;
+    padding: 20px;
+    transform: translateX(-20px);
+    background: #3f3f3e;
+    color:white;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, red, blue);
+    top: 0;
+    left: 0;
+}
+
+div {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    transform: translateY(100px);
+    border: 5px solid transparent;
+    border-radius: 20px;
+}
+
+div::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(to right, red, blue);
+    border-radius: 10px;
+}
+
+h2,h3 {
+    position: relative;
+    width: 98.7%;
+    padding: 20px;
+    background: #3f3f3e;
+    color:white;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+

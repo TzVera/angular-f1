@@ -1,0 +1,37 @@
+<!-- HTML Pilotos -->
+
+<!-- Fetching de datos -->
+<main>
+    <strong><h1>PILOTOS DE FORMULA 1</h1></strong>
+    
+    <!-- Mensaje de carga -->
+    @if (isLoading){
+        <h1>Cargando...</h1>
+    } @else {
+        <!-- Mensaje de error -->
+        @if(error){
+            <h1>{{ error }}</h1>
+        } @else {
+            <!-- Datos API Pilotos -->
+            <div class="drivers_container">
+                
+                @for (driver of drivers; track $index) {
+                    <div>
+                        <div class="drivers_card">
+                            <img [src]="driver.headshot_url" alt="{{ driver.full_name }}"/>
+                            <div class="drivers_data">
+                                <h3> PILOTO {{ $index + 1 }} </h3>
+                                <h3> Nombre: {{ driver.full_name }} </h3>
+                                <h3> País: {{ driver.country_code }} </h3>
+                                <h3> Equipo: {{ driver.team_name }} </h3>
+                                <h3> Dorsal de piloto: {{ driver.driver_number }} </h3>   
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        }
+    }
+    </main>
+    

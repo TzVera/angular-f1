@@ -1,0 +1,212 @@
+/* CSS elementos del formulario */
+
+main {
+    background: url('/background-contact.webp');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    position: relative;
+    width: 98.7%;
+    padding: 20px;
+    transform: translateX(-20px);
+    background: #3f3f3e;
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, red, blue);
+    top: 0;
+    left: 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 1.8%;
+    padding: 10px 20px;
+    background: black;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.input_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 50px;
+    overflow: hidden;
+    background: #3f3f3e;
+    border-radius: 20px; 
+}
+
+.input_container::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2300%;
+    overflow: hidden;
+    animation: rotate 4s linear infinite;
+    background: linear-gradient(red, blue);
+    border-radius: 10px;
+}
+
+.input_container::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    z-index: -1;
+    background: black;
+    border-radius: 20px;
+}
+
+input {
+    position: relative;
+    width: 93%;
+    padding: 5px 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.textarea_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 200px;
+    overflow: hidden;
+    background: #3f3f3e;
+    border-radius: 20px;
+}
+
+.textarea_container::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 540%;
+    overflow: hidden;
+    animation: rotate 4s linear infinite;
+    background: linear-gradient(red, blue);
+    border-radius: 10px;
+}
+
+.textarea_container::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    z-index: -1;
+    background: black;
+    border-radius: 20px;
+}
+
+textarea {
+    box-sizing: border-box;
+    position: relative;
+    width: 98%;
+    height: 150px;
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+
+input:focus, textarea:focus {
+    border: 5px solid #FF1801;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    outline: none;
+}
+
+div {
+    color: white;
+}
+
+.description_container {
+    transform: translateX(5px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px;
+    margin: 5% 25%;
+    cursor: pointer;
+    outline: none;
+    z-index: 0;
+    border-radius: 12px;
+    color: #FF1801;
+    font-size: 20px;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 140px;
+    height: 110%;
+    transition: opacity .3s ease-in-out;
+    z-index: -1;
+    animation: glowing 20s linear infinite;
+    background: linear-gradient(red, blue);
+    border-radius: 10px;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.426);
+    border-radius: 10px;
+}
+
+button:active {
+    color: white;
+    font-weight: bold;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+

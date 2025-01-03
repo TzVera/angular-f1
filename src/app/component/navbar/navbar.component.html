@@ -1,0 +1,50 @@
+<!-- HTML Barra de navegación -->
+
+<!-- Condicional barra de navegación -->
+@if(isLogin){
+    <header>
+        <nav>
+            <img class="logo" src="F1-logo.ico" alt="logo F1" />    
+            <ul>
+                <li>
+                    <a routerLink="/">
+                    <img src="home.svg" alt="icono inicio" />    
+                    <span class="text"> Inicio </span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/drivers">
+                    <img src="racer.svg" alt="icono piloto" />
+                    <span class="text"> Pilotos </span> 
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/contact">
+                    <img src="contact.svg" alt="icono contacto" />
+                    <span class="text"> Contacto </span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/" (click)="isLogin=false" (click)=alertLogin()>
+                    <img src="exit.svg" alt="icono salida" />
+                    <span class="text"> Salir </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+} @else {
+    <header>
+        <nav>
+            <img class="logo" src="F1-logo.ico" alt="logo F1" />    
+            <ul>
+                <li>
+                    <a routerLink="/" (click)="isLogin=true" (click)=alertLogin() >
+                    <img src="home.svg" alt="icono inicio" />    
+                    <span class="text"> Inicio </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+}

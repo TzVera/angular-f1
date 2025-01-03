@@ -1,59 +1,60 @@
-# AngularF1
+> # **_<u>DESARROLLO CON ANGULAR </u>_** 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
+>> ## **_<u>Trabajo práctico Final</u>_** 
+ 
+>>> ### Detalles de la página web AngularF1: 
 
-## Development server
+* <u>Home:</u> página de inicio describiendo las páginas restantes.
+* <u>Drivers:</u> se muestra detalles de una API de pilotos de Formula 1. 
+* <u>Contacto:</u> formulario de contacto con validaciones.
 
-To start a local development server, run:
+>>> ### Link a la [Aplicación](link 'Acceder a la aplicación')
 
-```bash
-ng serve
-```
+>>> ### Tecnologías utilizadas:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* Angular (versión 19.0.5)
+* Axios (versión 1.7.9)
+* Github (versión 3.15.1)
+* Vercel (versión )
+  
+>>> ### Instalación:
 
-## Code scaffolding
+1. Clonar el repositorio: 
+   
+   ~~~
+    git clone https://github.com/TzVera/e-commerce.git 
+   ~~~
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. Instalar dependencias:
+  
+   Previamente utilizar el comando: 
+   ~~~ 
+   cd angular-f1
+   ~~~
 
-```bash
-ng generate component component-name
-```
+   * Axios: 
+   ~~~
+   npm install axios
+   ~~~
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   * Angular: 
+   ~~~
+   npm install -g @angular/cli   
+   ~~~
 
-```bash
-ng generate --help
-```
+   Con el comando 
+   ~~~
+   ng serve
+   ~~~
+   Se lleva a cabo inicialización del servidor en http://localhost:4200/
 
-## Building
+>>>> #### Créditos:
 
-To build the project run:
+- Favicon: 
+  
+    https://game-icons.net/1x1/delapouite/full-motorcycle-helmet.html
+    
+    Full motorcycle helmet icon by [Delapouite](https://delapouite.com/) under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

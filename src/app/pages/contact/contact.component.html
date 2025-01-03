@@ -1,0 +1,90 @@
+<!-- HTML elementos del formulario -->
+
+<main>
+  <strong><h1>FORMULARIO DE CONTACTO</h1></strong>
+  
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    
+    <!-- Nombre -->
+    <label for="name"> NOMBRE </label>
+    <div class="input_container">
+      <input id="name" type="text" placeholder="Mínimo 3 caracteres, máximo 30 caracteres" formControlName="name">
+
+        <!-- Mensaje de requerimiento de escribir un nombre -->
+        @if(contactForm.get('name')?.invalid && contactForm.get('name')?.touched){
+          <div class="description_container">
+            @if(contactForm.get('name')?.errors?.['required']){
+              <small>Se requiere nombre</small>
+            }
+          </div>
+        }  
+      
+    </div>
+
+    <!-- Edad -->
+    <label for="edad"> EDAD </label>
+    <div class="input_container">
+      <input id="edad" type="text" placeholder="Edad mínima: 5 . Edad máxima: 130" formControlName="age">
+
+      <!-- Mensaje de requerimiento de escribir una edad -->
+      @if(contactForm.get('age')?.invalid && contactForm.get('age')?.touched){
+        <div class="description_container">
+          @if(contactForm.get('age')?.errors?.['required']){
+            <small>Se requiere edad</small>
+          }
+        </div>
+      }  
+
+    </div>
+
+    <!-- Email -->
+    <label for="email"> EMAIL </label>
+    <div class="input_container">
+      <input id="email" type="text" placeholder="Mínimo 3 caracteres, máximo 30 caracteres. Ejemplo: email@email.com" formControlName="email">
+
+      <!-- Mensaje de requerimiento de escribir un email -->
+      @if(contactForm.get('email')?.invalid && contactForm.get('email')?.touched){
+        <div class="description_container">
+          @if(contactForm.get('email')?.errors?.['required']){
+            <small>Se requiere email</small>
+          }
+        </div>
+      }  
+
+    </div>
+  
+    <!-- País -->
+    <label for="country"> PAÍS </label>
+    <div class="input_container">
+      <input id="country" type="text" placeholder="Mínimo 4 caracteres, máximo 30 caracteres" formControlName="country">
+
+      <!-- Mensaje de requerimiento de escribir un país -->
+      @if(contactForm.get('country')?.invalid && contactForm.get('country')?.touched){
+        <div class="description_container">
+          @if(contactForm.get('country')?.errors?.['required']){
+            <small>Se requiere país de origen</small>
+          }
+        </div>
+      }  
+
+    </div>
+  
+    <!-- Mensaje -->
+    <label for="message"> MENSAJE </label>
+    <div class="textarea_container">
+      <textarea id="message"  placeholder="Mínimo 10 caracteres, máximo 200 caracteres" formControlName="message"></textarea>
+
+      <!-- Mensaje de requerimiento de escribir un mensaje -->
+      @if(contactForm.get('message')?.invalid && contactForm.get('message')?.touched){
+        <div class="description_container">
+          @if(contactForm.get('message')?.errors?.['required']){
+            <small>Se requiere mensaje</small>
+          }
+        </div>
+      }  
+
+    </div>
+  
+    <button type="submit" [disabled]="contactForm.invalid"> Enviar </button>
+  </form>
+</main>

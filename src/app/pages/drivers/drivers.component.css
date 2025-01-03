@@ -1,0 +1,102 @@
+/* CSS Pilotos */
+
+main {
+    background: url('/background-racer.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    position: relative;
+    width: 98.7%;
+    padding: 20px;
+    transform: translateX(-20px);
+    background: #3f3f3e;
+    color:white;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, red, blue);
+    top: 0;
+    left: 0;
+}
+
+.drivers_container {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+}
+
+.drivers_card {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 18px;
+}
+
+.drivers_card::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    animation: rotate 4s linear infinite;
+    background: linear-gradient(red, blue);
+    border-radius: 10px;
+} 
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+img {
+    position: relative;
+    width: 130px;
+}
+
+alt {
+    color: white;
+}
+
+.drivers_data {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    transition: .3s;
+    backdrop-filter: blur(5px) saturate(20%);
+    background: #000a;
+    color: #fff;
+    text-align: center;
+}
+
+.drivers_card, .drivers_data {
+    bottom: 0;
+    left: 0; 
+    transition: all .7s ease-in-out; 
+}
+
+.drivers_card:hover {
+    transform: scale(.97); 
+    backdrop-filter: brightness(20%);
+    background-color: #FF1801;
+    border: 5px solid #FF1801;
+}
