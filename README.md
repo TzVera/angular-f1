@@ -22,7 +22,7 @@
 1. Clonar el repositorio: 
    
    ~~~
-    git clone https://github.com/TzVera/e-commerce.git 
+    git clone https://github.com/TzVera/angular-f1
    ~~~
 
 2. Instalar dependencias:
