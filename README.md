@@ -1,4 +1,4 @@
-> # **_<u>DESARROLLO CON ANGULAR </u>_** 
+> # **_<u>DESARROLLO CON ANGULAR</u>_** 
 
 >> ## **_<u>Trabajo práctico Final</u>_** 
  
@@ -8,14 +8,14 @@
 * <u>Drivers:</u> se muestra detalles de una API de pilotos de Formula 1. 
 * <u>Contacto:</u> formulario de contacto con validaciones.
 
->>> ### Link a la [Aplicación](link 'Acceder a la aplicación')
+>>> ### Link a la [Aplicación](https://angular-f1-deploy.vercel.app/ 'Acceder a la aplicación')
 
 >>> ### Tecnologías utilizadas:
 
 * Angular (versión 19.0.5)
 * Axios (versión 1.7.9)
 * Github (versión 3.15.1)
-* Vercel (versión )
+* Vercel (con Node.js versión 22.x)
   
 >>> ### Instalación:
 
